@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import time
+<<<<<<< HEAD
 import requests
 
 dweetIO= "https://dweet.io/dweet/for/"
@@ -8,6 +9,9 @@ myKey = "measure_distance"
 
 while True:
     
+=======
+while True:
+>>>>>>> cddea64678f6b61aca882913b001a88d0de04d44
     GPIO.setmode(GPIO.BCM)
 
     TRIG = 17
@@ -38,6 +42,7 @@ while True:
     
     distance = round(distance, 2)
 
+<<<<<<< HEAD
     dist =distance
     rqsString = dweetIO+myName+'?'+myKey+'='+str(dist)
     print(rqsString)
@@ -45,5 +50,8 @@ while True:
     print (rqs.status_code)
     print (rqs.headers)
     print (rqs.content)
+=======
+    print("Distance: ", distance, "cm")
+>>>>>>> cddea64678f6b61aca882913b001a88d0de04d44
 
     GPIO.cleanup()
